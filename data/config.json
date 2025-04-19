@@ -1,0 +1,5 @@
+{
+    "timeout": 6,
+    "user_agent": "0-Policy/1.0",
+    "report_dir": "."
+}

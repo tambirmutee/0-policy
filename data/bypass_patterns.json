@@ -1,0 +1,37 @@
+[
+  {
+    "pattern": "'unsafe-inline'",
+    "applies_to": ["script-src", "style-src"],
+    "severity": "high",
+    "description": "Allows execution of inline scripts or styles, which is a major XSS vector.",
+    "reference": "https://portswigger.net/web-security/csp#bypassing-csp"
+  },
+  {
+    "pattern": "*",
+    "applies_to": ["default-src", "script-src", "img-src"],
+    "severity": "critical",
+    "description": "Wildcard allows loading resources from any origin, making CSP ineffective.",
+    "reference": "https://csp-evaluator.withgoogle.com"
+  },
+  {
+    "pattern": "data:",
+    "applies_to": ["img-src", "script-src"],
+    "severity": "medium",
+    "description": "The use of data: URIs can be exploited to embed scripts or images.",
+    "reference": "https://owasp.org/www-project-secure-headers/"
+  },
+  {
+    "pattern": "blob:",
+    "applies_to": ["script-src", "media-src"],
+    "severity": "medium",
+    "description": "blob: URLs can host dynamic content which may bypass CSP.",
+    "reference": "https://csp.withgoogle.com/docs/faq.html#static-dynamic"
+  },
+  {
+    "pattern": "https://cdn.jsdelivr.net",
+    "applies_to": ["script-src"],
+    "severity": "low",
+    "description": "Third-party CDNs may introduce supply chain risk.",
+    "reference": "https://snyk.io/blog/cdn-security-risks/"
+  }
+]
