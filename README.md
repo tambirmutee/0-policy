@@ -79,12 +79,6 @@ Then follow the interactive menu to:
 
 ---
 
-## 🧪 Example Output
-
-![Terminal Screenshot](docs/screenshot.png)
-
----
-
 ## 📝 License
 
 This project is licensed under the [MIT License](LICENSE).
